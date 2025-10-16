@@ -1,5 +1,7 @@
 # GitHired — GitHub-based AI CV & Cover Letter Generator
 
+The following is create by https://github.com/Herc-Ch/readme-generator
+
 Generate polished, LaTeX-ready CVs and cover letters using your existing CV, your GitHub repositories (top-level READMEs), and live job postings. Powered by LangChain, OpenAI, PyGithub, Tavily, and optional local PDF compilation.
 
 ✨ Ideal for AI Engineer / RAG Engineer / Prompt Engineer profiles (configurable).
