@@ -196,7 +196,7 @@ flowchart LR
 ├─ outputs/
 │  ├─ cv_updated.tex
 │  └─ cover_letter_updated.tex
-└─ temp_repos/                  # Cloned repos for README ingestion
+└─ repos_cache/                  # Cloned repos for README ingestion
 ```
 
 ---
