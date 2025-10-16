@@ -8,7 +8,7 @@ venv/
 
 # Outputs
 data/*_private.tex
-temp_repos/
+repo_cache/
 *.pdf
 *.aux
 *.log

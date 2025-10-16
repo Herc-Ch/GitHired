@@ -48,7 +48,7 @@ def summarize_documents(
     return getattr(result, "content", str(result))
 
 
-def create_cv(force_update: bool = False) -> Path:
+def create_cv(force_update: bool = False, num_of_repos: int = 4) -> Path:
     """Generate an updated CV only if requested, otherwise reuse base CV."""
 
     if not force_update:
@@ -61,7 +61,7 @@ def create_cv(force_update: bool = False) -> Path:
         combined_docs_cv,
         TEMPLATE_REWRITE,
         fields="AI Engineer, RAG Engineer, Prompt Engineer",
-        number_of_repos=4,
+        number_of_repos=num_of_repos,
         extra_info="Begin",
     )
 
@@ -107,9 +107,9 @@ if __name__ == "__main__":
     JOB_URL = "https://eellak.ellak.gr/2025/10/02/software-engineer-python/?utm_medium=paid&utm_source=fb&utm_id=120234863720040414&utm_content=120234863721400414&utm_term=120234863720290414&utm_campaign=120234863720040414&fbclid=IwY2xjawNZYtxleHRuA2FlbQEwAGFkaWQBqyj4tioPvgEe7vNIRrbJxTR6h6_yvXwU165360dd2GkcAlXZsCYkjFsdaevoRuZ977Hue_8_aem_60_eIeNVUqENAlobqeXM4w"
 
     # 🟢 Default: not reuse existing CV
-    cv_path = create_cv(force_update=True)
+    cv_path = create_cv(force_update=True, num_of_repos=5)
 
     # 🧩 If you want to explicitly not update the CV first:
     # cv_path = create_cv(force_update=False)
 
-    create_cover_letter(JOB_URL, True, cv_path)
+    create_cover_letter(job_url=JOB_URL, generate=False, cv_path=cv_path)
