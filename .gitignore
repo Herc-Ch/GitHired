@@ -1,0 +1,20 @@
+# Bytecode
+__pycache__/
+
+# Environments
+.env
+.venv/
+venv/
+
+# Outputs
+data/*_private.tex
+temp_repos/
+*.pdf
+*.aux
+*.log
+*.out
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/

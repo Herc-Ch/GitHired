@@ -1,0 +1,119 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+\nopagenumbers{}
+\moderncvcolor{blue}
+\moderncvstyle{banking}
+
+% ------------------------------------------------------------
+% Essentials only
+% ------------------------------------------------------------
+\usepackage[scale=0.75]{geometry}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage[unicode]{hyperref}
+\usepackage{pagecolor}
+\usepackage{tikz}
+\usepackage{atbegshi}
+
+% ------------------------------------------------------------
+% Colors & background
+% ------------------------------------------------------------
+\definecolor{customcolor}{HTML}{8DD9BF}
+\definecolor{mybackground}{HTML}{84848A}
+
+\pagecolor{mybackground}
+\color{white}
+\definecolor{white}{RGB}{255,255,255}
+\colorlet{color0}{white}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=customcolor,
+  urlcolor=customcolor,
+  citecolor=customcolor
+}
+
+% ------------------------------------------------------------
+% Subtle watermark
+% ------------------------------------------------------------
+
+
+% ------------------------------------------------------------
+% Personal Info (anonymized)
+% ------------------------------------------------------------
+\name{\textcolor{white}{Alex}}{\textcolor{white}{Doe}}
+\email{alex.doe@example.com}
+\phone[mobile]{+00 000 000 0000}
+\social[linkedin]{alexdoe}
+\social[github]{alexdoe-dev}
+\extrainfo{\faYoutube\ \href{https://www.youtube.com/@ExampleChannel}{ExampleChannel}}
+
+% ------------------------------------------------------------
+% Document Body
+% ------------------------------------------------------------
+\begin{document}
+
+\makecvtitle
+
+\section{Summary}
+Data and AI engineer with a background in applied physics, specializing in retrieval-augmented generation (RAG), large language models, and backend automation. Experienced in building scalable APIs, orchestrating data pipelines, and integrating modern AI tooling with clean, reproducible engineering workflows.
+
+\section{Skills}
+\cvitem{\textcolor{black}{AI/LLM \& RAG}}{OpenAI API, LangChain, RAG design (chunking, embeddings, retrieval), Pinecone, Pydantic I/O, prompt chaining, fallback logic}
+\cvitem{\textcolor{black}{Backend \& APIs}}{Python, Flask, FastAPI, REST, Swagger, SQLAlchemy}
+\cvitem{\textcolor{black}{Frontend}}{React, Vite, TailwindCSS, shadcn/ui}
+\cvitem{\textcolor{black}{Data \& ML}}{Pandas, NumPy, scikit-learn, TensorFlow, Matplotlib}
+\cvitem{\textcolor{black}{Ops \& Tooling}}{Docker, GitHub Actions, LangSmith, Postman, SQLite, PostgreSQL, Pytest, Git, \LaTeX}
+
+\section{Experience}
+\cventry{2024--Present}{\textcolor{black}{Data Engineer / AI Developer}}{\textcolor{black}{TechSolutions Inc.}}{}{}{}{
+\begin{itemize}
+  \item Designed Python ETL pipelines for structured/unstructured data ingestion.
+  \item Integrated OpenAI-powered endpoints with FastAPI; deployed via Docker and CI/CD.
+  \item Improved reproducibility and observability through strict logging and documentation.
+\end{itemize}}
+
+\cventry{2022--2024}{\textcolor{black}{Freelance Developer (AI \& Automation)}}{\textcolor{black}{Global Clients}}{}{}{}{
+\begin{itemize}
+  \item Built full-stack AI apps using Flask/React, RAG pipelines, and automated reporting dashboards.
+  \item Delivered technical writing, LaTeX document automation, and reproducible scientific workflows.
+\end{itemize}}
+
+\cventry{2020--2022}{\textcolor{black}{Research Assistant}}{\textcolor{black}{University of Example}}{}{}{}{
+\begin{itemize}
+  \item Conducted computational modeling in Python and C++; implemented symbolic algebra routines.
+  \item Collaborated on simulation pipelines for physics-based models; validated results analytically.
+\end{itemize}}
+
+\section{Projects}
+\cvitem{\textcolor{black}{RAG Chat Assistant}}{\href{https://github.com/example/RAG-Chat}{\textbf{Document Chat System}} — Flask backend + React UI, document ingestion pipeline with embeddings and contextual responses. Dockerized and observable via LangSmith.}
+\cvitem{\textcolor{black}{README Generator}}{\href{https://github.com/example/readmegen}{\textbf{AI README Generator}} — Flask API + React UI, ranks repo files for inclusion and produces structured README drafts.}
+\cvitem{\textcolor{black}{LinkedIn Icebreaker}}{\href{https://github.com/example/icebreaker-agent}{\textbf{LLM-based Networking Tool}} — Agent pipeline that scrapes LinkedIn and crafts personalized messages.}
+\cvitem{\textcolor{black}{Tax AI App}}{\href{https://github.com/example/tax-ai}{\textbf{AI-driven Tax Assistant}} — Flask + React app offering natural language tax insights, with automated CI builds.}
+
+\section{Education}
+
+\cventry
+  {2021}
+  {\textcolor{black}{M.Sc. in Data Science}}
+  {\textcolor{black}{University of Example}}
+  {}
+  {}
+  {Thesis: \href{https://example.com/thesis.pdf}{\textit{Data-driven Modeling for Predictive Analytics}} \\
+   GPA: 8.7/10}
+
+\cventry
+  {2018}
+  {\textcolor{black}{B.Sc. in Physics}}
+  {\textcolor{black}{University of Example}}
+  {}
+  {}
+  {GPA: 7.1/10}
+
+
+\section{Other Highlights}
+\cvitem{\textcolor{black}{YouTube}}{\textcolor{red}{\faYoutube}\ \href{https://www.youtube.com/@ExampleChannel}{ExampleChannel} — Educational videos on data, AI, and scientific computing.}
+\cvitem{\textcolor{black}{2023}}{Speaker, Data \& AI Meetup — “Prompt Engineering for Transparent Workflows.”}
+\cvitem{\textcolor{black}{2022}}{Workshop Organizer, “Building Practical LLM Apps with Python.”}
+\cvitem{\textcolor{black}{2019–20}}{Technical Writer, \href{https://examplemagazine.com}{Example Magazine}.}
+
+\end{document}
