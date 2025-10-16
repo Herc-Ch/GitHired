@@ -22,10 +22,26 @@ def crawler(source: str) -> List[Document]:
         }
     )
 
-    all_docs = [
-        Document(page_content=item["raw_content"], metadata={"source": item["url"]})
-        for item in response["results"]
-    ]
+    all_docs = []
+    for item in response.get("results", []):
+        raw = item.get("raw_content")
+        if not raw:
+            print(f"⚠️ Skipping empty or inaccessible page: {item.get('url')}")
+            continue
+
+        all_docs.append(
+            Document(page_content=raw, metadata={"source": item.get("url", source)})
+        )
+
+    # Fallback if all pages are empty
+    if not all_docs:
+        print(f"⚠️ No readable content from {source}, adding placeholder document.")
+        all_docs.append(
+            Document(
+                page_content="Job posting unavailable or could not be scraped.",
+                metadata={"source": source},
+            )
+        )
 
     return all_docs
 
