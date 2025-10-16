@@ -7,6 +7,10 @@ DATA_DIR = BASE_DIR / "data"
 OUTPUTS_DIR = BASE_DIR / "outputs"
 REPOS_DIR = BASE_DIR / "temp_repos"
 
+# --- Ensure necessary folders exist ---
+OUTPUTS_DIR.mkdir(exist_ok=True)
+REPOS_DIR.mkdir(exist_ok=True)
+
 # --- Key files ---
 CV_TEX = DATA_DIR / "cv_private.tex"
 COVER_LETTER_TEX = DATA_DIR / "cover_letter_private.tex"
